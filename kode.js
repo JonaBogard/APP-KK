@@ -67,7 +67,7 @@ btnFon.addEventListener('click', async(e)=>{
       confirmButtonText: 'Send verify code',
       showCancelButton: true,
     })
-    window.recaptchaVerifier=new RecaptchaVerifier('recaptcha', {'size':'invisible'}, auth);
+    window.recaptchaVerifier=new RecaptchaVerifier('recaptcha', {'size':'invisible','callback': (response)}, auth);
     const appVerifier=window.recaptchaVerifier;
     const confirmationResult=await signInWithPhoneNumber(auth, tel, appVerifier)
     console.log(confirmationResult);
