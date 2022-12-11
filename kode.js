@@ -61,7 +61,7 @@ btnFon.addEventListener('click', async(e)=>{
       title: 'Place your phone number',
       input: 'tel',
       inputLabel: 'Phone',
-      inputValue: '+525514790879',
+      inputValue: '+525569696969',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       cancelButtonText: 'Cancel',
