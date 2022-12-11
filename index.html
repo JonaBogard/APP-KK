@@ -45,12 +45,10 @@
                 <li class="nav-item">
                   <button type="button" class="btn btn-outline-info" id="BtnCAG"><i class="bi bi-google m-2" ></i></i>Login with google</button>
                 </li>
-                <li class="nav-item">
-                  
-            <button type="button" class="btn btn-outline-warning" id="BtnPhone"><i class="bi bi-phone-fill" m-2></i>Phone</button>
-                </li>
-
-
+           <!--<li class="nav-item">
+            <button type="button" class="btn btn-outline-warning" id="BtnPhone" data-bs-toggle="modal" data-bs-target="#phoneMod"><i class="bi bi-phone-fill" m-2></i>Phone</button>
+               </li>-->
+               
 
               </ul>
             </div>
@@ -65,7 +63,7 @@
       Featured
     </div>
     <div class="card-body" >
-      <h5 class="card-title" id="hu">Welcome</h5>
+      <h2 class="card-title" id="hu">Welcome</h2>
       <div id="container"></div>
 
       
@@ -75,6 +73,7 @@
       Developed By @tiageorgina21 and @benitessantiagopablo
     </div>
   </div>
+  <div id="recaptcha"></div>
 <!-- END CARD -->
 <!-- START MODAL Login -->
 
@@ -102,6 +101,8 @@
           <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i class="bi bi-x-lg m-2"></i>Cancel</button>
           <button type="button" class="btn btn-outline-success" id="BtnI"><i class="bi bi-power m-2"></i>Login</button>
             <button type="button" class="btn btn-outline-dark" id="BtnAn"><i class="bi bi-incognito"></i>Anonimous</button>
+            <button type="button" class="btn btn-outline-warning" id="BtnPhone" data-bs-toggle="modal" data-bs-target="#phoneMod"><i class="bi bi-phone-fill" m-2></i>Phone</button>
+              
         </div>
       </div>
     </div>
@@ -227,7 +228,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" >
-        <div id="contQR"></div>
+        <center>
+          <div id="contQR"></div>
+        </center>
         
       </div>
       <div class="modal-footer">
@@ -236,6 +239,35 @@
     </div>
   </div>
 </div>
+
+<!-- START MODAL Login -->
+
+
+<!--<div class="modal fade" id="phoneMod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-person-bounding-box m-2" ></i>Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="frm-phone" ">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Number Phone:</label>
+            <input type="text" class="form-control" id="PhoneN">
+          </div>
+          <div id="captha"></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i class="bi bi-x-lg m-2"></i>Cancel</button>
+        <button type="button" class="btn btn-outline-success" id="BtnIPhone"><i class="bi bi-power m-2"></i>Login</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- END MODAL login -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>

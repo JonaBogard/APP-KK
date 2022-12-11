@@ -25,7 +25,8 @@ onAuthStateChanged(auth,(user)=>{
   if(user){
     container.innerHTML=`
     <h2>${user.displayName}</h2>
-    <p> ${user.email}</p><br>
+    <p> ${user.email}</p>
+    <p> ${user.phoneNumber}</p>
     
     <button class="btn btn-outline-success" id="btnAdd" data-bs-toggle="modal" data-bs-target="#addModal"><i class="bi bi-check"></i>Add Register</button>
       <table class="table" onload="onGetAlumnos()">
@@ -60,14 +61,14 @@ btnFon.addEventListener('click', async(e)=>{
       title: 'Place your phone number',
       input: 'tel',
       inputLabel: 'Phone',
-      inputValue: '+525509876543',
+      inputValue: '+525514790879',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       cancelButtonText: 'Cancel',
       confirmButtonText: 'Send verify code',
       showCancelButton: true,
     })
-    window.recaptchaVerifier=new RecaptchaVerifier('recaptcha', {'size':'invisible','callback': (response)}, auth);
+    window.recaptchaVerifier=new RecaptchaVerifier('recaptcha', {'size':'invisible'}, auth);
     const appVerifier=window.recaptchaVerifier;
     const confirmationResult=await signInWithPhoneNumber(auth, tel, appVerifier)
     console.log(confirmationResult);
@@ -88,7 +89,7 @@ btnFon.addEventListener('click', async(e)=>{
     checarEstado(user)
 
   }catch(error){
-    Swal.fire('Don´t is possible login whit your number phone')
+    Swal.fire('Don´t is possible login whit your number phone');
   }
   });
 
@@ -110,6 +111,8 @@ e.preventDefault();
     }
 
 });
+
+
 
 
 
